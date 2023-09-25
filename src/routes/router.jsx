@@ -5,6 +5,7 @@ import Home from "../admin/views/Home";
 import Panel from "../admin/views/Panel";
 import CategoryCreate from "../admin/views/CategoryCreate";
 import Category from "../admin/views/Category";
+import Size from "../admin/views/Size";
 
 const router = createBrowserRouter([
     {
@@ -20,12 +21,12 @@ const router = createBrowserRouter([
       element: <CategoryCreate />,
     },
     {
-      path: "/admin/categoria/:id",
+      path: "/admin/categoria/:category_id/:category_name",
       element: <Category />,
     },
     {
-      path: "/admin/crear-talle/:category_id",
-      element: <Category />,
+      path: "/admin/crear-talle/:category_id/:category_name",
+      element: <Size />,
     },
 ]);
 

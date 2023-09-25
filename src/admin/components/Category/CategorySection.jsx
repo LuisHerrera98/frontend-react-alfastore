@@ -4,17 +4,17 @@ import "./categorySection.css";
 import fetchSizes from "../../utils/fetchSizes";
 import { Link } from "react-router-dom";
 
-const CategorySection = ({ id }) => {
+const CategorySection = ({ category_id, category_name }) => {
     const [sizes, setSizes] = useState([])
 
     useEffect(() => {
-        fetchSizes(setSizes, id)
-    }, []);
+        fetchSizes(setSizes, category_id)
+    }, [category_id]);
 
     return (
         <div>
             <div className="box-button">
-                <Link to={'/admin/size/create'}>
+                <Link to={`/admin/crear-talle/${category_id}/${category_name}`}>
                     <button>Crear talle</button>
                 </Link>
             </div>

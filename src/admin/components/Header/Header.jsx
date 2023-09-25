@@ -5,7 +5,6 @@ import Logo from "./images/alfastore-icon.png";
 import Menu from "./images/menubar.png";
 import Admin from "./images/admin.png";
 import "./Header.css";
-import Category from "../Category/CategorySection";
 
 const Header = ({reload = null, setReload = null}) => {
   const [categories, setCategories] = useState([]);
@@ -32,7 +31,7 @@ const Header = ({reload = null, setReload = null}) => {
           <div className="close">
             <ul>
               {categories.map((category) => (
-                <Link key={category._id} className="title" to={`/admin/categoria/${category._id}`}>
+                <Link key={category._id} className="title" to={`/admin/categoria/${category._id}/${category.name}`}>
                   <li>{category.name}</li>
                 </Link>
               ))}

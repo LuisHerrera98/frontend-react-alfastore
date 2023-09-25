@@ -6,12 +6,12 @@ import { useParams } from 'react-router-dom'
 
 const Category = () => {
     
-    const {id} = useParams();
+    const {category_id, category_name} = useParams();
     
   return (
     <div>
         <Header />
-        <CategorySection id={id}/>
+        <CategorySection category_id={category_id} category_name={category_name}/>
     </div>
   )
 }

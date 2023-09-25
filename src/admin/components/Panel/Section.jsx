@@ -18,16 +18,6 @@ const Section = () => {
         </a>
       </div>
       <hr />
-      <div className="box-sizes">
-        <h3>Talles</h3>
-        <a href="">
-          <button>Crear talle</button>
-        </a>
-        <br />
-        <a href="">
-          <button>Editar talle</button>
-        </a>
-      </div>
     </div>
   );
 }
